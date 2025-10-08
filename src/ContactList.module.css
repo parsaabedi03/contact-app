@@ -1,0 +1,15 @@
+.container {
+  margin-top: 50px;
+}
+.container h2 {
+  color: #1f37c7;
+  margin-bottom: 10px;
+}
+.listContainer {
+  background-color: #f9f9fb;
+  padding: 30px;
+  border-radius: 20px;
+}
+.listContainer .text {
+  text-align: center;
+}

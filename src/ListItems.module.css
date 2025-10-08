@@ -1,0 +1,32 @@
+.contactCard {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.contactCard:last-child {
+  margin-bottom: 0;
+}
+.icon {
+  background-color: #f9f9fb;
+  font-size: 18px;
+  padding: 5px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.contactCard button {
+  background-color: #f9f9fb;
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.1s ease-in;
+}
+.contactCard button:hover {
+  transform: scale(1.1);
+}
