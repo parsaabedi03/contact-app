@@ -1,9 +1,11 @@
 .container {
-  margin-top: 50px;
   padding: 30px;
   background-color: #ffffff;
   box-shadow: 0 0 50px 0px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
+  max-width: calc(100% - 20px);
+  margin: 0 auto;
+  margin-top: 50px;
 }
 .container form {
   display: grid;
@@ -38,4 +40,10 @@
 .error {
   margin: 5px 0;
   color: red;
+}
+@media (max-width: 500px) {
+  .container form {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+  }
 }

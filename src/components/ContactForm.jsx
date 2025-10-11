@@ -1,10 +1,11 @@
 import { useState } from "react";
 import styles from "./ContactForm.module.css";
+import inputs from "../constants/inputs";
 
 function ContactForm({ setContacts }) {
   const [form, setForm] = useState({
     name: "",
-    lastname: "",
+    lastName: "",
     email: "",
     phone: "",
   });
@@ -13,7 +14,7 @@ function ContactForm({ setContacts }) {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    if (!form.name || !form.lastname || !form.email || !form.phone) {
+    if (!form.name || !form.lastName || !form.email || !form.phone) {
       setError(true);
       return;
     }
@@ -23,7 +24,7 @@ function ContactForm({ setContacts }) {
     setContacts((contacts) => [...contacts, newContact]);
     setForm({
       name: "",
-      lastname: "",
+      lastName: "",
       email: "",
       phone: "",
     });
@@ -40,34 +41,16 @@ function ContactForm({ setContacts }) {
     <>
       <div className={styles.container}>
         <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            name="name"
-            placeholder="Name"
-            value={form.name}
-            onChange={handleChange}
-          />
-          <input
-            type="text"
-            name="lastname"
-            placeholder="Lastname"
-            value={form.lastname}
-            onChange={handleChange}
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            value={form.email}
-            onChange={handleChange}
-          />
-          <input
-            type="number"
-            name="phone"
-            placeholder="Phone"
-            value={form.phone}
-            onChange={handleChange}
-          />
+          {inputs.map((input, index) => (
+            <input
+              key={index}
+              type={input.type}
+              name={input.name}
+              placeholder={input.placeholder}
+              value={form[input.name]}
+              onChange={handleChange}
+            />
+          ))}
           <button type="subnit">Add Contact</button>
         </form>
       </div>

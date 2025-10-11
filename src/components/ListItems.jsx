@@ -9,9 +9,11 @@ function ListItems({ data, setContacts }) {
 
   return (
     <div className={styles.contactCard}>
-      <span>
-        {name} {lastname}
-      </span>
+      <div>
+        <span>
+          {name} {lastname}
+        </span>
+      </div>
       <div>
         <span className={styles.icon}>📬</span>
         <span>{email}</span>

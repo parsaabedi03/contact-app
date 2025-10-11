@@ -1,5 +1,5 @@
-import Header from "./Header.jsx";
-import Contact from "./Contact.jsx";
+import Header from "./components/Header.jsx";
+import Contact from "./components/Contact.jsx";
 
 function App() {
   return (

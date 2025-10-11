@@ -1,4 +1,6 @@
 .container {
+  max-width: calc(100% - 30px);
+  margin: 0 auto;
   margin-top: 50px;
 }
 .container h2 {
