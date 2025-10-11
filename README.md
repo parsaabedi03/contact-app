@@ -20,7 +20,6 @@ This project allows users to **add, delete** for contacts.
 - useState Hook
 - Controlled Form Inputs
 - Props & Component Communication
-- LocalStorage Handling
 - Conditional Rendering
 - Reusable Components
 
